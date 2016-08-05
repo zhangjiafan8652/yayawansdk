@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startAnim"
+                android:text="Animation" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="login"
+                android:text="Login" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="payment"
+                android:text="Payment" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="accountManager"
+                android:text="AccountManager" />
+            
+             <Button
+                 android:id="@+id/nidongde"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clean"
+                android:text="清除数据库数据" />
+            
+             
+            
+
+            <requestFocus />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

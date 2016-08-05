@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yjqy.gzlj.yyw"
+    android:versionCode="1"
+    android:versionName="1.0.141" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+    <!-- 丫丫玩sdk 必须权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <!-- 快捷支付必须的权限 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="丫丫玩demo"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.yayawan.sdkdemo.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:label="丫丫玩demo"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <!-- BaseLogin_Activity 登录 -->
+        <activity
+            android:name="com.yayawan.sdk.jflogin.BaseLogin_Activity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:theme="@android:style/Theme.Dialog" />
+        <!-- 头像上传 -->
+        <activity
+            android:name="com.yayawan.sdk.jfsmallhelp.CropPhoto_Activity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        <!-- 发帖 -->
+        <activity
+            android:name="com.yayawan.sdk.jfsmallhelp.Push_feeling_Activity"
+            android:configChanges="keyboardHidden|navigation|screenSize|orientation" >
+        </activity>
+        <activity
+            android:name="com.yayawan.sdk.Yinlian_Activity"
+            android:configChanges="keyboardHidden|navigation|screenSize|orientation" >
+        </activity>
+        <activity
+            android:name="com.ipaynow.plugin.inner_plugin.wechat_plugin.activity.WeChatNotifyActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|smallestScreenSize|locale|screenLayout"
+            android:label="WeChatPayActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.switfpass.pay.activity.QQWapPayWebView"
+            android:screenOrientation="portrait" />
+
+        
+        <!-- 是否为调试模式 -->
+<!--         <meta-data
+            android:name="isdebug"
+            android:value="true" /> -->
+        <!-- yayawan_nochangecount设置为true这取消切换账号..除个别特殊游戏外.都不能取消切换账号这个选项 -->
+        <meta-data
+            android:name="yayawan_nochangecount"
+            android:value="false" />
+
+        <!-- 退出接口是否有弹框提示 -->
+        <meta-data
+            android:name="yayawan_exitdialog"
+            android:value="false" />
+        <meta-data
+            android:name="isHaveexit"
+            android:value="true" />
+        <meta-data
+            android:name="yayawan_game_id"
+            android:value="yaya600595554" />
+        <meta-data
+            android:name="union_id"
+            android:value="yaya1354981926" />
+        <meta-data
+            android:name="yayawan_game_key"
+            android:value="2739ae4cb1db672afaf6f93c04031ad5" />
+        <meta-data
+            android:name="yayawan_game_secret"
+            android:value="e918cb5d97d0a4acee54c1def8c3a78c" />
+        <meta-data
+            android:name="yayawan_source_id"
+            android:value="91" />
+        <meta-data
+            android:name="yayawan_version"
+            android:value="0.30" />
+        <!--
+        是否可以隐藏小助手,如果不配置,默认可以隐藏,
+        需要在有游戏中添加个人中心,如果设置为false,个人中心隐藏小助手无法使用
+        -->
+
+
+        <!--
+             <meta-data
+            android:name="yayawan_nochangecount"
+            android:value="true" />
+        -->
+        <!-- 横屏设置 -->
+
+        <meta-data
+            android:name="yayawan_orientation"
+            android:value="landscape" />
+
+        <!-- 竖屏设置 -->
+
+
+        <!--
+             <meta-data
+            android:name="yayawan_orientation"
+            android:value="portrait" />
+        -->
+
+
+        <!-- 支付方式选择,不设置在支付中心会显示该支付方式,设置为false将不出现该支付方式(默认全显示,只需配置不显示的支付方式即可) -->
+        <!-- 支付宝 -->
+        <meta-data
+            android:name="yaya_alipay"
+            android:value="true" />
+        <!-- 微信支付 -->
+        <meta-data
+            android:name="yaya_wxpay"
+            android:value="true" />
+
+        <!-- 银联 -->
+        <meta-data
+            android:name="yaya_yinlian"
+            android:value="true" />
+        <!-- 信用卡 -->
+        <meta-data
+            android:name="yaya_visa"
+            android:value="true" />
+        <!-- 丫丫币 -->
+        <meta-data
+            android:name="yaya_yayabi"
+            android:value="true" />
+        <!-- 储蓄卡 -->
+        <meta-data
+            android:name="yaya_cash"
+            android:value="true" />
+        <!-- 移动充值卡 -->
+        <meta-data
+            android:name="yaya_yidong"
+            android:value="true" />
+        <!-- 联通充值卡 -->
+        <meta-data
+            android:name="yaya_liantong"
+            android:value="true" />
+        <!-- 电信充值卡 -->
+        <meta-data
+            android:name="yaya_dianxin"
+            android:value="true" />
+        <!-- 盛大 -->
+        <meta-data
+            android:name="yaya_shengda"
+            android:value="false" />
+        <!-- 骏网 -->
+        <meta-data
+            android:name="yaya_junwang"
+            android:value="true" />
+        <!-- QQ -->
+        <meta-data
+            android:name="yaya_qq"
+            android:value="true" />
+
+        <activity
+            android:name="com.yayawan.sdkdemo.CeshiActivity"
+            android:label="@string/title_activity_ceshi" >
+        </activity>
+        <activity
+            android:name="com.yjqy.gzlj.yyw.CesActivity"
+            android:label="@string/title_activity_ces" >
+        </activity>
+    </application>
+
+</manifest>
